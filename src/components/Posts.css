@@ -1,0 +1,40 @@
+/* .postsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+} */
+
+body {
+    margin: 0;
+}
+
+.postContainer {
+    margin: 5px 0px 5px 0px;
+    padding: 5px; 
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+}
+
+.postContainer:hover .buttonContainer button {
+    display: initial;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer button {
+    display: none;
+}
+
+.textContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.saveButton {
+    display: none;
+}
+
