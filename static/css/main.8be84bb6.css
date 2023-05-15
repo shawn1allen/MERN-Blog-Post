@@ -1,0 +1,2 @@
+body{margin:0}.postContainer{border:1px solid #000;display:flex;flex-flow:column;margin:5px 0;padding:5px}.postContainer:hover .buttonContainer button{display:inline;display:initial}.buttonContainer{display:flex;flex-direction:column}.buttonContainer button{display:none}.textContainer{display:flex;flex-flow:column}.saveButton{display:none}.createPostContainer{display:flex;flex-flow:column}
+/*# sourceMappingURL=main.8be84bb6.css.map*/
