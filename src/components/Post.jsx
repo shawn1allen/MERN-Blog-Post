@@ -14,7 +14,7 @@ const Post = ({ post, fetchData }) => {
 
     const handleUpdate = async (e) => {
         
-        fetch(`blogapi.shawnallen.dev:3000/${post._id}`, {
+        fetch(`http://blogapi.shawnallen.dev:3000/${post._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
