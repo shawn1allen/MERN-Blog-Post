@@ -8,7 +8,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([])
 
   const fetchData = async () => {
-    const res = await fetch('http://blogapi.shawnallen.dev:3000/posts')
+    const res = await fetch('https://blogapi.shawnallen.dev/posts')
 
     const post = await res.json()
 
