@@ -28,7 +28,7 @@ const CreatePost = ({ fetchData }) => {
             
 
             <Button color="inherit" onClick={() => {
-                fetch('https://blogapi.shawnallen.dev/createPost', {
+                fetch('http://3.139.208.146/createPost', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ title: title, text: text }),

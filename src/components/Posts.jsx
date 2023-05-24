@@ -8,7 +8,13 @@ const Posts = () => {
   const [posts, setPosts] = useState([])
 
   const fetchData = async () => {
-    const res = await fetch('https://blogapi.shawnallen.dev/posts')
+    const res = await fetch('http://3.139.208.146/posts', {
+      method: 'GET', 
+      mode: 'cors', 
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
 
     const post = await res.json()
 
