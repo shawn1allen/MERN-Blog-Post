@@ -28,7 +28,7 @@ const CreatePost = ({ fetchData }) => {
             
 
             <Button color="inherit" onClick={() => {
-                fetch('http://3.139.208.146/createPost', {
+                fetch('http://13.58.216.101:3001/createPost', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ title: title, text: text }),

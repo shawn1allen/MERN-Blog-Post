@@ -14,7 +14,7 @@ const Post = ({ post, fetchData }) => {
 
     const handleUpdate = async (e) => {
         
-        fetch(`http://3.139.208.146/${post._id}`, {
+        fetch(`http://13.58.216.101:3001/${post._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'

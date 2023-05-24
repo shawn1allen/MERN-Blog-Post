@@ -8,9 +8,8 @@ const Posts = () => {
   const [posts, setPosts] = useState([])
 
   const fetchData = async () => {
-    const res = await fetch('http://3.139.208.146/posts', {
+    const res = await fetch('http://13.58.216.101:3001/posts', {
       method: 'GET', 
-      mode: 'cors', 
       headers: {
         'Content-Type': 'application/json'
       }
