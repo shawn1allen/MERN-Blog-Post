@@ -14,7 +14,7 @@ const Post = ({ post, fetchData }) => {
 
     const handleUpdate = async (e) => {
         
-        fetch(`https://ifywrr2ldj.execute-api.us-east-2.amazonaws.com/${post._id}`, {
+        fetch(`https://blogapi.shawnallen.dev/${post._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const Post = ({ post, fetchData }) => {
     }
 
     const handleDelete = async () => {
-        await fetch(`https://ifywrr2ldj.execute-api.us-east-2.amazonaws.com/delete/${post._id}`, {
+        await fetch(`https://blogapi.shawnallen.dev/delete/${post._id}`, {
             method: 'DELETE'
         }).then(data => {
             console.log('Deleted post:', data)
