@@ -8,7 +8,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([])
 
   const fetchData = async () => {
-    const res = await fetch('http://13.58.216.101:3001/posts', {
+    const res = await fetch('https://ifywrr2ldj.execute-api.us-east-2.amazonaws.com/posts', {
       method: 'GET', 
       headers: {
         'Content-Type': 'application/json'

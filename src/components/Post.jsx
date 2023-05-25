@@ -14,7 +14,7 @@ const Post = ({ post, fetchData }) => {
 
     const handleUpdate = async (e) => {
         
-        fetch(`http://13.58.216.101:3001/${post._id}`, {
+        fetch(`https://ifywrr2ldj.execute-api.us-east-2.amazonaws.com/${post._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const Post = ({ post, fetchData }) => {
     }
 
     const handleDelete = async () => {
-        await fetch(`http://localhost:3001/delete/${post._id}`, {
+        await fetch(`https://ifywrr2ldj.execute-api.us-east-2.amazonaws.com/delete/${post._id}`, {
             method: 'DELETE'
         }).then(data => {
             console.log('Deleted post:', data)
