@@ -10,27 +10,9 @@ const Post = ({ post, fetchData, currentUserId }) => {
     const [text, setText] = useState(post.text)
     const [isEditing, setIsEditing] = useState(false)
     const { isAuthenticated, getAccessTokenSilently } = useAuth0();
-    const [accessToken, setAccessToken] = useState('');
     const [showError, setShowError] = useState(false)
 
     const userId = post.userId;
-
-    //Gets access key on page load and assigned to accessToken
-    useEffect(() => {
-        if (isAuthenticated) {
-            const getToken = async () => {
-                const token = await getAccessTokenSilently({
-                    scope: "read:current_user",
-                    audience: "https://blogpostapi.shawnallen.dev"
-                });
-
-                setAccessToken(token)
-            }
-
-            getToken();
-        }
-
-    }, []);
 
     //Enables editing on the text fields 
     const handleEdit = () => {
@@ -52,11 +34,15 @@ const Post = ({ post, fetchData, currentUserId }) => {
     //Authenticates using access token in Authorization header
     const handleUpdate = async (e) => {
         if (isAuthenticated) {
+            const token = await getAccessTokenSilently({
+                audience: "https://blogpostapi.shawnallen.dev"
+            });
+
             await fetch(`https://blogapi.shawnallen.dev/put/${post._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${accessToken}`
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({ title, text })
             }).then(response => response.json())
@@ -78,10 +64,14 @@ const Post = ({ post, fetchData, currentUserId }) => {
     //Authenticates using access token in Authorization header
     const handleDelete = async () => {
         if (isAuthenticated) {
+            const token = await getAccessTokenSilently({
+                audience: "https://blogpostapi.shawnallen.dev"
+            });
+
             await fetch(`https://blogapi.shawnallen.dev/delete/${post._id}`, {
                 method: 'DELETE',
                 headers: {
-                    Authorization: `Bearer ${accessToken}` // Include the access token in the Authorization header
+                    Authorization: `Bearer ${token}` // Include the access token in the Authorization header
                 }
             })
         }
