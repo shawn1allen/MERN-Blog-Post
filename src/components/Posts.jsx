@@ -13,7 +13,6 @@ const Posts = () => {
 
   //On page load, gets userId from currently logged in user
   useEffect(() => {
-    if (isAuthenticated) {
       const assignData = async () => {
         await new Promise(resolve => setTimeout(resolve, 2000)); // Sleep for 2 seconds
 
@@ -25,7 +24,6 @@ const Posts = () => {
       };
 
       assignData()
-    }
 
   }, [])
 
