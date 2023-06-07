@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# MERN Blog Post Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://blog.shawnallen.dev/
 
-## Available Scripts
+## Author
 
-In the project directory, you can run:
+Shawn Allen
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React, HTML, CSS, JavaScript, Express, AWS, MongoDB, Auth0, MaterialUI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tools Used
 
-### `npm test`
+ - My blog post application is built using a combination of technologies that include React, HTML, CSS, and JavaScript. These technologies allow me to create an engaging and dynamic user interface for my blog platform. With React, I can efficiently render and manage the components of my application, ensuring a smooth user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - To handle the back-end functionality, I chose to use Express, which provides a solid framework for routing and handling API requests. This allows me to implement CRUD operations (Create, Read, Update, Delete) for my blog posts. MongoDB serves as the database to store and manage my blog posts, ensuring efficient data storage and retrieval.
 
-### `npm run build`
+ - To ensure secure access to my application, I integrated Auth0 for user login and authentication. This allows me to authenticate and authorize users, ensuring that only authorized individuals can create, edit, and delete blog posts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - For the back-end infrastructure, I opted for AWS (Amazon Web Services). AWS provides a reliable and scalable solution for hosting my application's backend API, ensuring that my application can handle a growing number of users and traffic effectively.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - Overall, this tech stack empowers me to create a fully functional blog platform that allows users to create, read, update, and delete blog posts seamlessly. The combination of these technologies enables me to deliver a secure, efficient, and engaging blogging experience to my users.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Material UI: Used to design and style various components such as buttons, cards, navigation bars, and form inputs giving a neat and polished look. 

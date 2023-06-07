@@ -13,25 +13,28 @@ const Posts = () => {
 
   //On page load, gets userId from currently logged in user
   useEffect(() => {
-    const assignData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Sleep for 2 seconds
+    if (isAuthenticated) {
+      const assignData = async () => {
+        await new Promise(resolve => setTimeout(resolve, 2000)); // Sleep for 2 seconds
 
-      const idTokenClaims = await getIdTokenClaims();
-      if (idTokenClaims) {
-        const userId = idTokenClaims.sub;
-        setCurrentUserId(userId);
-      }
-    };
+        const idTokenClaims = await getIdTokenClaims();
+        if (idTokenClaims) {
+          const userId = idTokenClaims.sub;
+          setCurrentUserId(userId);
+        }
+      };
 
-    assignData()
+      assignData()
+    }
+
   }, [])
 
-  
+
   //Passing this function to each fetch to update each time there are changes made
   //Handles the fetch call using the get method. 
   const fetchData = async () => {
     const res = await fetch('https://blogapi.shawnallen.dev/posts', {
-      method: 'GET', 
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
@@ -48,11 +51,11 @@ const Posts = () => {
 
   return (
     <>
-    <Bar fetchData={fetchData}/>
-    <div className="postsContainer">
-      {posts.reverse().map((post) => <Post fetchData={fetchData} key={post._id}
-        post={post} currentUserId={currentUserId} />)}
-    </div>
+      <Bar fetchData={fetchData} />
+      <div className="postsContainer">
+        {posts.reverse().map((post) => <Post fetchData={fetchData} key={post._id}
+          post={post} currentUserId={currentUserId} />)}
+      </div>
     </>
   );
 }

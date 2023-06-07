@@ -17,16 +17,19 @@ const Post = ({ post, fetchData, currentUserId }) => {
 
     //Gets access key on page load and assigned to accessToken
     useEffect(() => {
-        const getToken = async () => {
-            const token = await getAccessTokenSilently({
-                scope: "read:current_user",
-                audience: "https://blogpostapi.shawnallen.dev"
-            });
+        if (isAuthenticated) {
+            const getToken = async () => {
+                const token = await getAccessTokenSilently({
+                    scope: "read:current_user",
+                    audience: "https://blogpostapi.shawnallen.dev"
+                });
 
-            setAccessToken(token)
+                setAccessToken(token)
+            }
+
+            getToken();
         }
 
-        getToken();
     }, []);
 
     //Enables editing on the text fields 
