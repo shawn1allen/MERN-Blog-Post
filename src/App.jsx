@@ -4,7 +4,7 @@ import Bar from "./components/Bar.jsx"
 const App = () => {
     return (
       <div>
-        <Bar />
+        {/* <Bar /> */}
         <Posts />
       </div>
     )
