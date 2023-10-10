@@ -26,7 +26,7 @@ export default function ButtonAppBar({ fetchData }) {
                         <CreatePost fetchData={fetchData} handleClose={handleClose} />
                     </Dialog>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
-                        Blogify: A MERN Application
+                        Blogify: A M.E.R.N. Application
                     </Typography>
                     {!isAuthenticated && <LoginButton />}
                     {isAuthenticated && <LogoutButton />}
